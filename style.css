@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #1C0963;
+}
+.piano{
+    display: none;
+    justify-content: center;
+}
+.key {
+    width: 40px;
+    height: 150px;
+    border: 1px solid #000;
+    margin: 0 1px;
+    cursor: pointer;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 5px 0;
+}
+.white {
+    background-color: #fff;
+    color: black;
+}
+.black{
+    background-color: #000;
+    width: 30px;
+    height: 100px;
+    margin: 0 -15px;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+h1{
+    margin: 40px 0 20px 0;
+}
+#name{
+    width:40vw;
+    margin-bottom: 20px;
+    height: 30px;
+    border: 1px solid rgb(8, 8, 8);
+    padding: 6px 3px;
+    border-radius: 3px;
+    background-color: #02277E;
+}
+#name:focus{
+    border: 1px solid rgb(235, 235, 245);
+}
+#password{
+    height: 30px;
+    border: 1px solid black;
+    width: 40vw;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-out;
+    background-color: #02277E;
+}
+.btn{
+    padding: 5px 0;
+    width: 40vw;
+    background-color: #0D00BF;
+    text-align: center;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+label{
+    width: 40vw;
+    padding: 5px 0;
+}
+.note-icon {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #ff0000; /* Customize the color */
+    animation: noteAnimation 1s ease-out;
+}
+
+@keyframes noteAnimation {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
